@@ -73,12 +73,12 @@
             justify-content: space-between;
             overflow-y: auto;
             
-            /* 預設隱藏並稍微下移 20px */
+            /* 預設初始狀態：隱藏且下移 20px */
             opacity: 0;
             transform: translateY(20px);
         }
 
-        /* 滾動到每一頁時，觸發與第一頁完全一致的 fadeInUp 質感動畫 */
+        /* 滾動到每一頁時觸發 fadeInUp 質感動畫 */
         .page-section.is-visible .glass-card {
             animation: fadeInUp 0.8s ease-out forwards;
         }
@@ -192,7 +192,7 @@
                     永續經濟活動、綠色證券、溫室氣體範疇3<br>
                     <span class="font-bold text-fubon-dark mt-2 block">三個概念，一次搞懂！</span>
                 </p>
-                <p class="text-sm text-gray-400 mt-4">向下滑動開始探索 <i class="fa-solid fa-chevron-down animate-bounce ml-1"></i></p>
+                <p class="text-sm text-gray-400 mt-4">向下滾動開始探索 <i class="fa-solid fa-chevron-down animate-bounce ml-1"></i></p>
             </div>
         </section>
 
@@ -438,7 +438,7 @@
                     <span class="text-fubon font-bold tracking-wider text-sm mb-1 block">第二部分｜綠色證券認證制度</span>
                     <h2 class="text-2xl md:text-3xl font-bold mb-4 border-b-2 border-fubon inline-block pb-1">什麼是綠色證券認證？</h2>
                 </div>
-                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQ4cHQiIGhlaWdodD0iMjU3cHQiIHZpZXdCb3g9IjAgMCAyNDggMjU3IiB2ZXJzaW9uPSIxLjEiPgo8ZyBpZD0ic3VyZmFjZTEiPgo8cGF0aCBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6cmdiKDAlLDYzLjUyOTQxMiUsNjEuNTY4NjI3JSk7ZmlsbC1vcGFjaXR5OjE7IiBkPSJNIDE4Ni40Njg3NSAxMjcuMjYxNzE5IEMgMTg2LjQ2ODc1IDEyNy4yNjE3MTkgMTg2LjQ2ODc1IDEyOC4wMTE3MTkgMTg4LjYyNSAxMjkuNTExNzE5IEMgMjAyLjMyMDMxMiAxNDAuNTU4NTk0IDIwOS42MzY3MTkgMTUxLjIzODI4MSAyMDkuNTQyOTY5IDE3Mi45NjA5MzggQyAyMDkuNDQ5MjE5IDIwMC4xMTcxODggMTg1LjgxMjUgMjE5Ljc4MTI1IDE1OS4wODIwMzEgMjE5Ljc4MTI1IEwgMTU5LjA4MjAzMSAyNTcuMjQyMTg4IEMgMjA1LjY5NTMxMiAyNTcuMjQyMTg4IDI0OCAyMjQuMDg5ODQ0IDI0OCAxNzYuNzk2ODc1IEMgMjQ4IDE1OS44NDc2NTYgMjQzLjQwMjM0NCAxNDMuMTc5Njg4IDIzMS44NjMyODEgMTI2Ljk4NDM3NSBDIDIzMi40Mjk2ODggMTI2LjMyNDIxOSAyMzQuODYmtXJ1bGU6bm9uemVybztmaWxsOnJnYigwJSw1OC40MzEzNzMlLDcyLjE1Njg2MyUpO2ZpbGwtb3BhY2l0eToxOyIgZD0iTSA4My4xMDE1NjIgMCBMIDcxLjk0MTQwNiAwIEMgNTEuNjc5Njg4IDAuNTYyNSAzMC40ODQzNzUgNi45Mjk2ODggMTYuMzIwMzEyIDIzLjAzOTA2MiBDIDEuNDA2MjUgMzkuODk0NTMxIDAgNTQuOTY4NzUgMCA3OS43ODUxNTYgQyAwIDk2LjY0MDYyNSAwIDI1Ny4xNDg0MzggMCAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxNDguNDI1NzgxIEwgODIuNzMwNDY5IDE0OC40MjU3ODEgTCA4Mi43MzA0NjkgMjE4LjU2NjQwNiBMIDM4LjY0NDUzMSAyMTguNTY2NDA2IEwgMzguNjQ0NTMxIDcxLjU0Njg3NSBDIDM4LjY0NDUzMSA3MS41NDY4NzUgMzUuNzM0Mzc1IDM5LjYxMzI4MSA3NC4yODkwNjIgMzguNzY5NTMxIEwgODMuMTA1NDY5IDM4LjM5NDUzMSBMIDgzLjEwNTQ2OSAwICIvPgo8L2c+Cjwvc3ZnPgo=" alt="富邦 Fubon Logo" class="page-logo shrink-0">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQ4cHQiIGhlaWdodD0iMjU3cHQiIHZpZXdCb3g9IjAgMCAyNDggMjU3IiB2ZXJzaW9uPSIxLjEiPgo8ZyBpZD0ic3VyZmFjZTEiPgo8cGF0aCBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6cmdiKDAlLDYzLjUyOTQxMiUsNjEuNTY4NjI3JSk7ZmlsbC1vcGFjaXR5OjE7IiBkPSJNIDE4Ni40Njg3NSAxMjcuMjYxNzE5IEMgMTg2LjQ2ODc1IDEyNy4yNjE3MTkgMTg2LjQ2ODc1IDEyOC4wMTE3MTkgMTg4LjYyNSAxMjkuNTExNzE5IEMgMjAyLjMyMDMxMiAxNDAuNTU4NTk0IDIwOS42MzY3MTkgMTUxLjIzODI4MSAyMDkuNTQyOTY5IDE3Mi45NjA5MzggQyAyMDkuNDQ5MjE5IDIwMC4xMTcxODggMTg1LjgxMjUgMjE5Ljc4MTI1IDE1OS4wODIwMzEgMjE5Ljc4MTI1IEwgMTU5LjA4MjAzMSAyNTcuMjQyMTg4IEMgMjA1LjY5NTMxMiAyNTcuMjQyMTg4IDI0OCAyMjQuMDg5ODQ0IDI0OCAxNzYuNzk2ODc1IEMgMjQ4IDE1OS44NDc2NTYgMjQzLjQwMjM0NCAxNDMuMTc5Njg4IDIzMS44NjMyODEgMTI2Ljk4NDM3NSBDIDIzMi40Mjk2ODggMTI2LjMyNDIxOSAyMzQuODY3MTg4IDEyMy40MjE4NzUgMjM2LjkzMzU5NCAxMTkuNzczNDM4IEMgMjM5Ljc0NjA5NCAxMTQuNzE0ODQ0IDI0MC4zMDg1OTQgMTA4LjYyNSAyNDAuMzA4NTk0IDg4LjMwODU5NCBMIDI0MC4zMDg1OTQgMCBMIDEyMC44MDg1OTQgMCBMIDEyMC44MDg1OTQgNzAuMzI0MjE5IEwgODIuNzMwNDY5IDcwLjMyNDIxOSBMIDgyLjczMDQ2OSAxMDkgTCAxNTkuNzM0Mzc1IDEwOSBMIDE1OS43MzQzNzUgMzkuNjEzMjgxIEwgMjAyLjY5NTMxMiAzOS42MTMyODEgTCAyMDIuNjk1MzEyIDk5LjQ0OTIxOSBDIDIwMi42OTUzMTIgOTkuNDQ5MjE5IDIwNC40NzY1NjIgMTE2LjIxMDkzOCAxODYuNDY4NzUgMTI3LjI2MTcxOSAiLz4KPHBhdGggc3R5bGU9IiBzdHJva2U6bm9uZTtmaWxsLXJ1bGU6bm9uemVybztmaWxsOnJnYigwJSw1OC40MzEzNzMlLDcyLjE1Njg2MyUpO2ZpbGwtb3BhY2l0eToxOyIgZD0iTSA4My4xMDE1NjIgMCBMIDcxLjk0MTQwNiAwIEMgNTEuNjc5Njg4IDAuNTYyNSAzMC40ODQzNzUgNi45Mjk2ODggMTYuMzIwMzEyIDIzLjAzOTA2MiBDIDEuNDA2MjUgMzkuODk0NTMxIDAgNTQuOTY4NzUgMCA3OS43ODUxNTYgQyAwIDk2LjY0MDYyNSAwIDI1Ny4xNDg0MzggMCAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxNDguNDI1NzgxIEwgODIuNzMwNDY5IDE0OC40MjU3ODEgTCA4Mi43MzA0NjkgMjE4LjU2NjQwNiBMIDM4LjY0NDUzMSAyMTguNTY2NDA2IEwgMzguNjQ0NTMxIDcxLjU0Njg3NSBDIDM4LjY0NDUzMSA3MS41NDY4NzUgMzUuNzM0Mzc1IDM5LjYxMzI4MSA3NC4yODkwNjIgMzguNzY5NTMxIEwgODMuMTA1NDY5IDM4LjM5NDUzMSBMIDgzLjEwNTQ2OSAwICIvPgo8L2c+Cjwvc3ZnPgo=" alt="富邦 Fubon Logo" class="page-logo shrink-0">
                 </div>
                 
                 <p class="text-base text-gray-700 bg-white p-4 rounded-xl shadow-sm border-l-4 border-fubon">
@@ -742,7 +742,7 @@
                     <span class="text-fubon font-bold tracking-wider text-sm mb-1 block">第三部分｜溫室氣體</span>
                     <h2 class="text-2xl md:text-3xl font-bold mb-4 border-b-2 border-fubon inline-block pb-1">什麼是溫室氣體範疇3？</h2>
                 </div>
-                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQ4cHQiIGhlaWdodD0iMjU3cHQiIHZpZXdCb3g9IjAgMCAyNDggMjU3IiB2ZXJzaW9uPSIxLjEiPgo8ZyBpZD0ic3VyZmFjZTEiPgo8cGF0aCBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6cmdiKDAlLDYzLjUyOTQxMiUsNjEuNTY4NjI3JSk7ZmlsbC1vcGFjaXR5OjE7IiBkPSJNIDE4Ni40Njg3NSAxMjcuMjYxNzE5IEMgMTg2LjQ2ODc1IDEyNy4yNjE3MTkgMTg2LjQ2ODc1IDEyOC4wMTE3MTkgMTg4LjYyNSAxMjkuNTExNzE5IEMgMjAyLjMyMDMxMiAxNDAuNTU4NTk0IDIwOS42MzY3MTkgMTUxLjIzODI4MSAyMDkuNTQyOTY5IDE3Mi45NjA5MzggQyAyMDkuNDQ5MjE5IDIwMC4xMTcxODggMTg1LjgxMjUgMjE5Ljc4MTI1IDE1OS4wODIwMzEgMjE5Ljc4MTI1IEwgMTU5LjA4MjAzMSAyNTcuMjQyMTg4IEMgMjA1LjY5NTMxMiAyNTcuMjQyMTg4IDI0OCAyMjQuMDg5ODQ0IDI0OCAxNzYuNzk2ODc1IEMgMjQ4IDE1OS44NDc2NTYgMjQzLjQwMjM0NCAxNDMuMTc5Njg4IDIzMS44NjMyODEgMTI2Ljk4NDM3NSBDIDIzMi40Mjk2ODggMTI2LjMyNDIxOSAyMzQuODY3MTg4IDEyMy40MjE4NzUgMjM2LjkzMzU5NCAxMTkuNzczNDM4IEMgMjM5Ljc0NjA5NCAxMTQuNzE0ODQ0IDI0MC4zMDg1OTQgMTA4LjYyNSAyNDAuMzA4NTk0IDg4LjMwODU5NCBMIDI0MC4zMDg1OTQgMCBMIDEyMC44MDg1OTQgMCBMIDEyMC44MDg1OTQgNzAuMzI0MjE5IEwgODIuNzMwNDY5IDcwLjMyNDIxOSBMIDgyLjczMDQ2OSAxMDkgTCAxNTkuNzM0Mzc1IDEwOSBMIDE1OS43MzQzNzUgMzkuNjEzMjgxIEwgMjAyLjY5NTMxMiAzOS42MTMyODEgTCAyMDIuNjk1MzEyIDk5LjQ0OTIxOSBDIDIwMi42OTUzMTIgOTkuNDQ5MjE5IDIwNC40NzY1NjIgMTE2LjIxMDkzOCAxODYuNDY4NzUgMTI3LjI2MTcxOSAiLz4KPHBhdGggc3R5bGU9IiBzdHJva2U6bm9uZTtmaWxsLXJ1bGU6bm9uemVybztmaWxsOnJnYigwJSw1OC40MzEzNzMlLDcyLjE1Njg2MyUpO2ZpbGwtb3BhY2l0eToxOyIgZD0iTSA4My4xMDE1NjIgMCBMIDcxLjk0MTQwNiAwIEMgNTEuNjc5Njg4IDAuNTYyNSAzMC40ODQzNzUgNi45Mjk2ODggMTYuMzIwMzEyIDIzLjAzOTA2MiBDIDEuNDA2MjUgMzkuODk0NTMxIDAgNTQuOTY4NzUgMCA3OS43ODUxNTYgQyAwIDk2LjY0MDYyNSAwIDI1Ny4xNDg0MzggMCAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxNDguNDI1NzgxIEwgODIuNzMwNDY5IDE0OC40MjU3ODEgTCA4Mi43MzA0NjkgMjE4LjU2NjQwNiBMIDM4LjY0NDUzMSAyMTguNTY2NDA2IEwgMzguNjQ0NTMxIDcxLjU0Njg3NSBDIDM4LjY0NDUzMSA3MS41NDY4NzUgMzUuNzM0Mzc1IDM5LjYxMzI4MSA3NC4yODkwNjIgMzguNzY5NTMxIEwgODMuMTA1NDY5IDM4LjM5NDUzMSBMIDgzLjEwNTQ2OSAwICIvPgo8L2c+Cjwvc3ZnPgo=" alt="富邦 Fubon Logo" class="page-logo shrink-0">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQ4cHQiIGhlaWdodD0iMjU3cHQiIHZpZXdCb3g9IjAgMCAyNDggMjU3IiB2ZXJzaW9uPSIxLjEiPgo8ZyBpZD0ic3VyZmFjZTEiPgo8cGF0aCBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6cmdiKDAlLDYzLjUyOTQxMiUsNjEuNTY4NjI3JSk7ZmlsbC1vcGFjaXR5OjE7IiBkPSJN IDE4Ni40Njg3NSAxMjcuMjYxNzE5IEMgMTg2LjQ2ODc1IDEyNy4yNjE3MTkgMTg2LjQ2ODc1IDEyOC4wMTE3MTkgMTg4LjYyNSAxMjkuNTExNzE5IEMgMjAyLjMyMDMxMiAxNDAuNTU4NTk0IDIwOS42MzY3MTkgMTUxLjIzODI4MSAyMDkuNTQyOTY5IDE3Mi45NjA5MzggQyAyMDkuNDQ5MjE5IDIwMC4xMTcxODggMTg1LjgxMjUgMjE5Ljc4MTI1IDE1OS4wODIwMzEgMjE5Ljc4MTI1IEwgMTU5LjA4MjAzMSAyNTcuMjQyMTg4IEMgMjA1LjY5NTMxMiAyNTcuMjQyMTg4IDI0OCAyMjQuMDg5ODQ0IDI0OCAxNzYuNzk2ODc1IEMgMjQ4IDE1OS44NDc2NTYgMjQzLjQwMjM0NCAxNDMuMTc5Njg4IDIzMS44NjMyODEgMTI2Ljk4NDM3NSBDIDIzMi40Mjk2ODggMTI2LjMyNDIxOSAyMzQuODY3MTg4IDEyMy40MjE4NzUgMjM2LjkzMzU5NCAxMTkuNzczNDM4IEMgMjM5Ljc0NjA5NCAxMTQuNzE0ODQ0IDI0MC4zMDg1OTQgMTA4LjYyNSAyNDAuMzA4NTk0IDg4LjMwODU5NCBMIDI0MC4zMDg1OTQgMCBMIDEyMC44MDg1OTQgMCBMIDEyMC44MDg1OTQgNzAuMzI0MjE5IEwgODIuNzMwNDY5IDcwLjMyNDIxOSBMIDgyLjczMDQ2OSAxMDkgTCAxNTkuNzM0Mzc1IDEwOSBMIDE1OS43MzQzNzUgMzkuNjEzMjgxIEwgMjAyLjY5NTMxMiAzOS42MTMyODEgTCAyMDIuNjk1MzEyIDk5LjQ0OTIxOSBDIDIwMi42OTUzMTIgOTkuNDQ5MjE5IDIwNC40NzY1NjIgMTE2LjIxMDkzOCAxODYuNDY4NzUgMTI3LjI2MTcxOSAiLz4KPHBhdGggc3R5bGU9IiBzdHJva2U6bm9uZTtmaWxsLXJ1bGU6bm9uemVybztmaWxsOnJnYigwJSw1OC40MzEzNzMlLDcyLjE1Njg2MyUpO2ZpbGwtb3BhY2l0eToxOyIgZD0iTSA4My4xMDE1NjIgMCBMIDcxLjk0MTQwNiAwIEMgNTEuNjc5Njg4IDAuNTYyNSAzMC40ODQzNzUgNi45Mjk2ODggMTYuMzIwMzEyIDIzLjAzOTA2MiBDIDEuNDA2MjUgMzkuODk0NTMxIDAgNTQuOTY4NzUgMCA3OS43ODUxNTYgQyAwIDk2LjY0MDYyNSAwIDI1Ny4xNDg0MzggMCAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAyNTcuMTQ4NDM4IEwgMTIxLjM3NSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxODcuNTcwMzEyIEwgMTU5LjgyODEyNSAxNDguNDI1NzgxIEwgODIuNzMwNDY5IDE0OC40MjU3ODEgTCA4Mi43MzA0NjkgMjE4LjU2NjQwNiBMIDM4LjY0NDUzMSAyMTguNTY2NDA2IEwgMzguNjQ0NTMxIDcxLjU0Njg3NSBDIDM4LjY0NDUzMSA3MS41NDY4NzUgMzUuNzM0Mzc1IDM5LjYxMzI4MSA3NC4yODkwNjIgMzguNzY5NTMxIEwgODMuMTA1NDY5IDM4LjM5NDUzMSBMIDgzLjEwNTQ2OSAwICIvPgo8L2c+Cjwvc3ZnPgo=" alt="富邦 Fubon Logo" class="page-logo shrink-0">
                 </div>
                 
                 <p class="text-base text-gray-700 bg-white p-4 rounded-xl shadow-sm border-l-4 border-fubon">
@@ -796,7 +796,7 @@
                 
                 <div class="grid md:grid-cols-2 gap-6 my-auto">
                     <div class="bg-white rounded-2xl p-4 shadow-sm border-t-4 border-fubon hover:shadow-lg hover:-translate-y-1 active:scale-[0.97] transition-all duration-200">
-                        <h3 class="text-base font-bold text-fubon-dark mb-3"><i class="fa-solid fa-arrow-up-from-bracket"></i> 上游排放 <span class="text-xs font-normal text-gray-500">(來自供應商/夥伴)</span></h3>
+                        <h3 class="text-base font-bold text-fubon-dark mb-3"><i class="fa-solid fa-arrow-up-long"></i> 上游排放 <span class="text-xs font-normal text-gray-500">(來自供應商/夥伴)</span></h3>
                         <ul class="text-xs md:text-sm space-y-2 text-gray-700">
                             <li><span class="bg-gray-100 px-2 py-0.5 rounded text-xs font-bold mr-2">類別1</span> 購買的商品及勞務</li>
                             <li><span class="bg-gray-100 px-2 py-0.5 rounded text-xs font-bold mr-2">類別2</span> 資本財 (廠房設備)</li>
@@ -1060,7 +1060,7 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // 進入畫面時觸發與第一頁完全相同的 fadeInUp
+                    // 進入畫面時觸發與第一頁完全相同的 fadeInUp 動畫
                     entry.target.classList.add('is-visible');
 
                     // 更新導航小圓點
@@ -1090,10 +1090,10 @@
         
         // 成長階段：種子期(1-2頁) → 破土萌芽期(3-5頁) → 青年期(6-9頁) → 成熟期(10-13頁)
         const growthStages = [
-            { upTo: 1, icon: '🌰' },
-            { upTo: 4, icon: '🌱' },
-            { upTo: 8, icon: '🌿' },
-            { upTo: totalPages - 1, icon: '🌳' }
+            { upTo: 1, icon: '🌰' },  // 種子期：第 1-2 頁
+            { upTo: 4, icon: '🌱' },  // 破土萌芽期：第 3-5 頁
+            { upTo: 8, icon: '🌿' },  // 青年期：第 6-9 頁
+            { upTo: totalPages - 1, icon: '🌳' } // 成熟期：第 10-13 頁
         ];
 
         function updateReadingProgress(index) {
