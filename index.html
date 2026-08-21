@@ -52,6 +52,7 @@
         }
         .page-section {
             scroll-snap-align: start;
+            scroll-snap-stop: always;
             height: 100vh;
             height: 100dvh;
             display: flex;
@@ -78,6 +79,14 @@
             /* 預設初始狀態：隱藏且下移 20px */
             opacity: 0;
             transform: translateY(20px);
+        }
+
+        @media (max-width: 767px) {
+            .glass-card {
+                height: calc(100dvh - 3rem);
+                min-height: 0;
+                max-height: none;
+            }
         }
 
         /* 滾動到每一頁時觸發 fadeInUp 質感動畫 */
