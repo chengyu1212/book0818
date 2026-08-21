@@ -44,7 +44,7 @@
             display: none;
         }
         .snap-y-container {
-            scroll-snap-type: y proximity;
+            scroll-snap-type: y mandatory;
             overflow-y: scroll;
             height: 100vh;
             height: 100dvh;
@@ -52,7 +52,6 @@
         }
         .page-section {
             scroll-snap-align: start;
-            scroll-snap-stop: normal;
             height: 100vh;
             height: 100dvh;
             display: flex;
@@ -134,14 +133,6 @@
         }
         .quiz-option-btn:hover { border-color: #00a29a; background: #f0fdfa; transform: translateX(3px); }
         .quiz-option-btn:active { transform: scale(0.98); }
-        .quiz-option-btn-selected {
-            border-color: #00a29a !important;
-            background: #e0f2f1 !important;
-            transform: translateX(3px);
-        }
-        .quiz-option-btn-selected .opt-badge {
-            background: #00a29a; color: #fff;
-        }
         .quiz-option-btn .opt-badge {
             width: 1.6rem; height: 1.6rem; border-radius: 999px; background: #e0f2f1; color: #00796b;
             font-weight: 800; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; shrink-0;
@@ -203,35 +194,6 @@
             #readingProgress { height: 7px; }
             #readingProgressIcon { top: 7px; font-size: 1.6rem; }
             #readingProgressLabel { top: 12px; font-size: 0.75rem; }
-        }
-
-        /* 列印：只印出測驗結果，其餘 12 頁與導覽元件全部隱藏，
-           並解除 scroll-snap/固定高度/overflow 限制，避免印出空白頁 */
-        @media print {
-            body * { visibility: hidden; }
-            #assessStep3, #assessStep3 * { visibility: visible; }
-            #assessStep3 {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                margin: 0;
-                padding: 1cm;
-            }
-            #readingProgress, #readingProgressIcon, #readingProgressLabel,
-            #printResultBtn, #restartBtn { display: none !important; }
-            html, body { height: auto !important; overflow: visible !important; background: #fff !important; }
-            .snap-y-container { height: auto !important; overflow: visible !important; }
-            .page-section { height: auto !important; overflow: visible !important; padding: 0 !important; }
-            .glass-card {
-                opacity: 1 !important;
-                transform: none !important;
-                max-height: none !important;
-                overflow: visible !important;
-                box-shadow: none !important;
-                border: none !important;
-                background: #fff !important;
-            }
         }
         .nav-dot {
             transition: all 0.3s ease;
@@ -1186,10 +1148,7 @@
                         <div class="flex flex-wrap gap-2" id="resultCategories"></div>
                     </div>
 
-                    <div class="text-center mt-4 flex items-center justify-center gap-3">
-                        <button id="printResultBtn" class="text-xs md:text-sm font-bold text-fubon-dark bg-white border border-fubon/40 hover:bg-fubon-light px-5 py-2 rounded-full transition-colors shadow-sm">
-                            <i class="fa-solid fa-print mr-1"></i> 保存/列印結果
-                        </button>
+                    <div class="text-center mt-4">
                         <button id="restartBtn" class="text-xs md:text-sm font-bold text-white bg-fubon hover:bg-fubon-dark px-5 py-2 rounded-full transition-colors shadow-sm">
                             <i class="fa-solid fa-rotate-right mr-1"></i> 重新測驗
                         </button>
@@ -1273,13 +1232,6 @@
             sections[0].classList.add('is-visible');
         }
         updateReadingProgress(0);
-
-        // 保底機制：若因外部資源（Tailwind/FontAwesome/字型 CDN）延遲或
-        // IntersectionObserver 未正常觸發，2 秒後強制顯示所有卡片，
-        // 避免使用者看到空白畫面卻不知道發生什麼事
-        setTimeout(() => {
-            sections.forEach(section => section.classList.add('is-visible'));
-        }, 2000);
     </script>
     <script>
     (function () {
@@ -1416,10 +1368,6 @@
         const quizOptions = document.getElementById('quizOptions');
         const quizBackBtn = document.getElementById('quizBackBtn');
         const restartBtn = document.getElementById('restartBtn');
-        const printResultBtn = document.getElementById('printResultBtn');
-        if (printResultBtn) {
-            printResultBtn.addEventListener('click', () => window.print());
-        }
 
         if (!industryGrid) return; // 頁面不存在時（例如舊版快取）直接跳過
 
@@ -1469,8 +1417,6 @@
                 btn.innerHTML = `<span class="opt-badge">${labels[oi]}</span><span>${opt.text}</span>`;
                 btn.addEventListener('click', () => {
                     state.answers[idx] = opt.score;
-                    quizOptions.querySelectorAll('.quiz-option-btn').forEach(b => b.classList.remove('quiz-option-btn-selected'));
-                    btn.classList.add('quiz-option-btn-selected');
                     quizProgressBar.style.width = `${((idx + 1) / total) * 100}%`;
                     setTimeout(() => {
                         if (idx + 1 < total) {
